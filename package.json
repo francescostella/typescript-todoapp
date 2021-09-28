@@ -1,0 +1,22 @@
+{
+  "name": "typescript-todoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francescostella/typescript-todoapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francescostella/typescript-todoapp/issues"
+  },
+  "homepage": "https://github.com/francescostella/typescript-todoapp#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.6"
+  }
+}
