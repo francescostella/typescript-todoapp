@@ -17,10 +17,20 @@
     </div>
 
     <div class="list-group">
-      <label class="list-group-item d-flex gap-3">
-        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
+      <div class="todos-list">
+        <label class="list-group-item d-flex gap-3">
+          <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="" style="font-size: 1.375em;">
+          <span class="pt-1 form-checked-content">
+            <strong>Finish sales report</strong>
+          </span>
+        </label>
+      </div>
+      <label class="list-group-item d-flex gap-3 bg-light">
         <span class="pt-1 form-checked-content">
-          <strong>Finish sales report</strong>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Description">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
         </span>
       </label>
     </div>
