@@ -31,7 +31,7 @@ export default class TodoListComponent {
       <label class="list-group-item d-flex gap-3">
         <input class="form-check-input flex-shrink-0" type="checkbox" value="" ${todo.state === 2 ? 'checked=""' : '' } style="font-size: 1.375em;">
         <span class="pt-1 form-checked-content">
-          <strong>${todo.name}</strong>
+          ${todo.name}
         </span>
       </label>
     `).on('click', function() {
