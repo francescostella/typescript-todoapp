@@ -12,7 +12,11 @@ export default class TodoListComponent {
     this.$element.html('')
 
     if (!todos.length) {
-      this.$element.html(`<strong>You've completed everything you needed to do!</strong>`)
+      this.$element.html(`
+        <div class="col-lg-6 mx-auto text-center">
+          <p class="lead mt-4 mb-4">You've completed everything you needed to do!</p>
+        </div>
+      `)
       return
     }
 
