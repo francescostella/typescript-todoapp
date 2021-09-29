@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc && copy-files-from-to"
   },
+  "copyFiles": [
+    {
+      "from": "index.html",
+      "to": "public/index.html"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/francescostella/typescript-todoapp.git"
@@ -20,6 +27,7 @@
     "@types/jquery": "^3.5.6"
   },
   "devDependencies": {
+    "copy-files-from-to": "^3.2.1",
     "typescript": "^4.4.3"
   }
 }
