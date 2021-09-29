@@ -33,6 +33,10 @@ export default class TodoListComponent {
     `).on('click', function() {
       var event = document.createEvent('CustomEvent');
       event.initCustomEvent('todo-toggle', true, true, { todoId: todo.id });
+
+      // const event = new CustomEvent('todo-toggle', {
+      //   todoId: todo.id
+      // })
       this.dispatchEvent(event);
     });
   }
