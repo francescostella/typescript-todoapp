@@ -1,27 +1,27 @@
-import { Todo, TodoState } from './Model'
-import TodoService, { ITodoService } from './TodoService'
-import TodoListComponent from './TodoListComponent'
+import { Todo, TodoState } from './Model.js'
+import TodoService, { ITodoService } from './TodoService.js'
+import TodoListComponent from './TodoListComponent.js'
 
-export class TodoApp {
+export default class TodoApp {
   private todoService: TodoService
   private todoList: TodoListComponent
 
-  constructor(element, todos) {
+  constructor(element: HTMLElement, todos: string[]) {
     this.todoService = new TodoService(todos)
     this.initialize(element)
   }
 
-  addTodo(todoName: string) {
+  addTodo(todoName: string): void {
     this.todoService.add(todoName)
     this.renderTodos()
   }
 
-  clearCompleted() {
+  clearCompleted(): void {
     this.todoService.clearCompleted()
     this.renderTodos()
   }
 
-  toggleTodoState(todoId) {
+  toggleTodoState(todoId: number): void {
     this.todoService.toggle(todoId)
     this.renderTodos()
   }
@@ -34,24 +34,24 @@ export class TodoApp {
     this.todoList.render(todos)
   }
 
-  initialize(element) {
+  initialize(element: HTMLElement): void {
     const _this = this
 
     const addTodoFormElement = element.querySelector('.add-todo-form')
-    const addTodoNameElement = element.querySelector('.add-todo-form__input')
-    const todoListElement = element.querySelector('.todo-list')
-    const clearCompletedElement = element.querySelector('.clear-completed')
+    const addTodoNameElement = <HTMLInputElement>addTodoFormElement.querySelector('.add-todo-form__input')
+    const todoListElement = <HTMLElement>element.querySelector('.todo-list')
+    const clearCompletedElement = element.querySelector('.add-todo-form__clear')
 
     addTodoFormElement.addEventListener('submit', function(event) {
       _this.addTodo(addTodoNameElement.value)
-      addTodoNameElement.value = ''
+      addTodoNameElement.value = '' 
       event.preventDefault()
     })
 
     todoListElement.addEventListener('todo-toggle', function(event) {
-      const todoId = event.details.todoId
+      const todoId = (<CustomEvent>event).detail.todoId
       _this.todoService.toggle(todoId)
-      _this.renderTodos
+      _this.renderTodos()
     })
 
     clearCompletedElement.addEventListener('click', function() {

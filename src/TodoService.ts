@@ -1,4 +1,4 @@
-import { Todo, TodoState } from './Model'
+import { Todo, TodoState } from './Model.js'
 
 // Interfaces
 export interface ITodoService {
@@ -48,7 +48,7 @@ export default class TodoService implements ITodoService {
   @log
   add(input): Todo {
     let todo: Todo = {
-      id: generateTodoId(),
+      id: null,
       name: null,
       state: TodoState.Active
     }
@@ -62,6 +62,12 @@ export default class TodoService implements ITodoService {
       throw 'Invalid Todo name!'
     }
 
+    if (todo.name.trim() === '') {
+      return todo
+    }
+
+    // Generate an ID only if the Todo entry will be inserted
+    todo.id = generateTodoId()
     this._todos.push(todo)
 
     return todo
@@ -72,7 +78,7 @@ export default class TodoService implements ITodoService {
    */
   clearCompleted(): void {
     this._todos = this._todos.filter(
-      item => item.state == TodoState.Active
+      item => item.state === TodoState.Active
     )
   }
 

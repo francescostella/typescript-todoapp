@@ -1,4 +1,4 @@
-import { Todo, TodoState } from './Model'
+import { Todo, TodoState } from './Model.js'
 import 'https://code.jquery.com/jquery-1.12.4.min.js'
 
 export default class TodoListComponent {
@@ -35,12 +35,13 @@ export default class TodoListComponent {
         </span>
       </label>
     `).on('click', function() {
-      var event = document.createEvent('CustomEvent');
-      event.initCustomEvent('todo-toggle', true, true, { todoId: todo.id });
-
-      // const event = new CustomEvent('todo-toggle', {
-      //   todoId: todo.id
-      // })
+      const event = new CustomEvent('todo-toggle', {
+        bubbles: true,
+        detail: {
+          todoId: todo.id
+        }
+      })
+      
       this.dispatchEvent(event);
     });
   }

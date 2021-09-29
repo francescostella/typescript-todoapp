@@ -29,7 +29,7 @@
           <div class="input-group">
             <input type="text" class="add-todo-form__input form-control" placeholder="Write here a New Todo">
             <button type="submit" class="add-todo-form__button btn btn-primary">Add</button>
-            <button type="submit" class="add-todo-form__button btn btn-outline-secondary">Clear Completed</button>
+            <button type="submit" class="add-todo-form__clear btn btn-outline-secondary">Clear Completed</button>
           </div>
         </form>
       </label>
@@ -45,12 +45,13 @@
     </footer>
   </div>
 
-
-  
-
-  <script src="dist/TodoApp.js"></script>
-  <script type="text/javascript">
-  
+  <script type="module">
+    import TodoApp from './dist/TodoApp.js';
+    new TodoApp(document, [
+      'Pick up cape from drycleaning',
+      'Clean Daily Planet desk',
+      'Save Metropolis'
+    ])
   </script>
 </body>
 </html>
