@@ -1,5 +1,5 @@
 {
-  "name": "typescript-todoapp",
+  "name": "todoapp-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,14 +15,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/francescostella/typescript-todoapp.git"
+    "url": "git+https://github.com/francescostella/todoapp-typescript.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/francescostella/typescript-todoapp/issues"
+    "url": "https://github.com/francescostella/todoapp-typescript/issues"
   },
-  "homepage": "https://github.com/francescostella/typescript-todoapp#readme",
+  "homepage": "https://github.com/francescostella/todoapp-typescript#readme",
   "dependencies": {
     "@types/jquery": "^3.5.6"
   },
