@@ -1,4 +1,4 @@
-# Typescript TodoApp
+# TodoApp (Typescript)
 ### Setup & Build
 - Execute `npm install` to install the packages
 - Execute `npx tsc -w` to run Typescript Compiler
