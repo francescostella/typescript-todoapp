@@ -1,5 +1,4 @@
-import { Todo, TodoState } from './Model.js'
-import TodoService, { ITodoService } from './TodoService.js'
+import TodoService from './TodoService.js'
 import TodoListComponent from './TodoListComponent.js'
 
 export default class TodoApp {

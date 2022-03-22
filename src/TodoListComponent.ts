@@ -1,4 +1,3 @@
-import { Todo, TodoState } from './Model.js'
 import 'https://code.jquery.com/jquery-1.12.4.min.js'
 
 export default class TodoListComponent {
