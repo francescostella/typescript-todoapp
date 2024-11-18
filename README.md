@@ -1,4 +1,6 @@
 # TodoApp (Typescript)
+![CleanShot 2024-11-18 at 12 28 41@2x](https://github.com/user-attachments/assets/61bd1970-462b-489c-8c85-b14bf346ad38)
+
 ### Setup & Build
 - Execute `npm install` to install the packages
 - Execute `npm run build` to run Typescript Compiler
